@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  tasks:any[]=[];
+  user: any;
   title = 'final-year';
+
+  setUser(user: any) {
+    this.user = user;
+ }
 }

@@ -1,0 +1,67 @@
+
+<div id="wrapper">
+    <app-header></app-header>
+    <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content">
+            <app-navbar></app-navbar>
+            <div class="container-fluid">
+                <h1 class="h3 mb-2 text-gray-800">Consultant Page</h1>
+                <p class="mb-4"></p>
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <!-- <a routerLink="/report" class="d-sm-inline-block btn btn-sm btn-primary shadow-sm  align-items-right">New Consultant</a> -->
+                        <h1 class="h3 mb-2 text-gray-800">Total Adviced consultant</h1>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>SN</th>
+                                        <th>CONSUTANT NAME</th>
+                                        <th>ROLE</th>
+                                        <th>PHONE</th>
+                                        <th>ADDRESS</th>
+                                        <th>EMAIL</th>
+                                        <th>SPECIALIZED</th>
+                                        <th>STATUS</th>
+                                        <!-- <th>PASSWORD</th> -->
+                                        <th>ACTION</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let data of advice">
+                                        <td>{{data.consID}}</td>
+                                        <td>{{data.f_name}} {{data.s_name2}} {{data.l_name}}</td>
+                                        <td>{{data.role}}</td>
+                                        <td>{{data.phoneNumber}}</td>
+                                        <th>{{data.address}}</th>
+                                        <td>{{data.email}}</td>
+                                        <td>{{data.working_experience}}</td>
+                                        <td>{{data.status}}</td>
+                                        <!-- <td>{{data.password}}</td> -->
+                                        <td>
+                                            <!-- <button type="button" class="btn btn-outline-secondary btn-rounded btn-icon" data-toggle="modal" data-target="#exampleModel">
+                                                <i class="fas fa-eye text-success"></i>
+                                            </button>&nbsp; -->
+                                            <button type="button" class="btn btn-outline-secondary btn-rounded btn-icon" data-toggle="modal" data-target="#exampleModel">
+                                                <i class="fas fa-pen text-success"></i>
+                                            </button>&nbsp;
+                                            <button type="button" class="btn btn-outline-secondary btn-rounded btn-icon" data-toggle="modal" data-target="#exampleModel">
+                                                <i class="fas fa-trash text-success"></i>
+                                            </button>&nbsp;
+                                            <!-- <a routerLink="/report" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">Download</a> -->
+                                        </td>
+                                    </tr>
+                                   
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <app-footer></app-footer>
+    </div>
+</div>

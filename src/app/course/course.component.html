@@ -1,0 +1,41 @@
+
+<div id="wrapper">
+    <app-header></app-header>
+    <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content">
+            <app-navbar></app-navbar>
+            <div class="container-fluid">
+                <!-- <h1 class="h3 mb-2 text-gray-800">TList Of All Courses With Its University</h1> -->
+                <p class="mb-4"></p>
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <!-- <a routerLink="/report" class="d-sm-inline-block btn btn-sm btn-primary shadow-sm  align-items-right">New Zhelb Loan Officer</a> -->
+                        <h1 class="h3 mb-2 text-gray-800">List Of All Courses With Its University</h1>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>UNIVERSITY NAME</th>
+                                        <th>COURSES</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let data of course">
+                                        <td>{{data.universityID}} {{data.uniName}}</td>
+                                            <td>{{data.courseName}} {{data.courseDescription}} {{data.credits}}</td>
+                                            <!-- <a routerLink="/report" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">Download The Courses</a> -->
+                                    </tr>
+                                   
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <app-footer></app-footer>
+    </div>
+</div>

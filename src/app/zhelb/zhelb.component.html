@@ -1,0 +1,58 @@
+
+<div id="wrapper">
+    <app-header></app-header>
+    <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content">
+            <app-navbar></app-navbar>
+            <div class="container-fluid">
+                <h1 class="h3 mb-2 text-gray-800">Total Registered Zhelb Loan Officer</h1>
+                <p class="mb-4"></p>
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <a routerLink="/report" class="d-sm-inline-block btn btn-sm btn-primary shadow-sm  align-items-right">New Zhelb Loan Officer</a>
+                        <!-- <h1 class="h3 mb-2 text-gray-800">Total Registered Zhelb Loan Officer</h1> -->
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>SN</th>
+                                        <th>LOAN OFFICER NAME</th>
+                                        <th>ROLE</th>
+                                        <th>PHONE</th>
+                                        <th>ADRESS</th>
+                                        <th>EMAIL</th>
+                                        <th>LOAN TYPE</th>
+                                        <th>STATUS</th>
+                                        <!-- <th>PASSWORD</th> -->
+                                        <th>ACTION</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let data of loan">
+                                        <td>{{data.loanID}}</td>
+                                        <td>{{data.f_name}} {{data.s_name2}} {{data.l_name}}</td>
+                                        <td>{{data.role}}</td>
+                                        <td>{{data.phoneNumber}}</td>
+                                        <th>{{data.address}}</th>
+                                        <td>{{data.email}}</td>
+                                        <td>{{data.loanType}}</td>
+                                        <td>{{data.status}}</td>
+                                        <!-- <td>{{data.password}}</td> -->
+                                        <td>
+                                            <a routerLink="/report" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">Delete</a>
+                                        </td>
+                                    </tr>
+                                   
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <app-footer></app-footer>
+    </div>
+</div>
